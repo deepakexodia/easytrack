@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+    <!-- ----------General------------------- -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ---------------------------Template---------------------------------------------- */
+        .heading {
+            /* border:2px solid red; */
+            width: 100%;
+            height: 50px;
+        }
+
+        body {
+            /* background: url("http://thecodeplayer.com/uploads/media/bluebg.jpg")
+                center center fixed; */
+            background-size: cover;
+            /* background: linear-gradient(to right, #2F0D30 0%, #9C2DA3 50%, #290E27 100%); */
+            /* background-color: #f3e5f5 */
+            /* background-color: #e8f5e9; */
+            background-color: #e0e0e0
+        }
+
+        .template {
+            /* background-color: black; */
+            /* height: 530px; */
+            /* width: 100%; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* overflow: hidden; */
+            /* position: absolute; */
+            /* border: 2px solid red; */
+            background-image: url("pictures/pexel1080.jpg");
+            background-size: cover;
+        }
+
+        .template>div {
+            /* border: 2px solid blue; */
+            width: 90%;
+            display: flex;
+
+        }
+
+        .template>div>div:first-child {
+            /* border: 2px solid red; */
+            color: white;
+            flex: 74%
+        }
+
+        .template>div>div:first-child h1 {
+            margin-top: 100px
+        }
+
+        .card {
+            flex: 26%;
+            margin-bottom: 30px;
+            height: 529px;
+            opacity: 0;
+
+        }
+
+
+        .myButton {
+            color: black;
+            font-size: 18px;
+            line-height: 12px;
+            padding: 11px;
+            border-radius: 5px;
+            font-weight: normal;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: normal;
+            text-transform: none;
+            background: #F2FF40;
+            display: inline-block;
+            margin-top: 80px;
+
+        }
+
+        .myButton:hover {
+            background: #212121;
+            color: white;
+            transition: all 0.4s ease 0s;
+        }
+
+        .myButton:active {
+            background: #144E75;
+        }
+
+        /* ------------------------------Partners--------------------------------------------------------- */
+        .partner {
+            border: 1px solid #bdbdbd;
+            height: 150px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+
+        }
+
+        .partner div {
+            /* border: 1px solid blue; */
+            height: 150px;
+            width: 150px;
+
+        }
+
+        .partner div:first-child {
+            font-size: 30px;
+            line-height: 60px;
+            padding-top: 8px;
+            border-right: 1px solid #bdbdbd;
+        }
+
+        .partner div img {
+            height: 100%;
+            width: 100%
+        }
+
+        /* * -----------------------------Partner Mobile-------------------------------------------------------------- */
+        .mobile-partner {
+            border: 1px solid #bdbdbd;
+            height: 120px;
+            width: 100%;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+
+        .mobile-partner div {
+            /* border: 1px solid blue; */
+            height: 120px;
+            /* width: 120px; */
+            display: inline-block;
+            margin-left: 100px;
+
+        }
+
+        .mobile-partner div img {
+            height: 100%;
+            /* width: 100% */
+        }
+
+        /* -------------------------------------------------------------------------------------------------------- */
+
+        h3 {
+            margin-bottom: 100px;
+            margin-top: 100px;
+            font-family: anton;
+        }
+
+        p {
+            color: #757575;
+            font-size: 18px;
+        }
+
+        /* -------------------------------------AUTO TEXT----------------------------------------------------- */
+
+        .line-1 {
+            height: 50px;
+            font-size: 180%;
+            /* text-align: center; */
+            white-space: nowrap;
+            overflow: hidden;
+            z-index: 100;
+            /* align-self: center; */
+            /* border: 2px solid blue; */
+            margin-top: 100px;
+        }
+
+        /* Animation */
+
+        .anim-typewriter {
+            animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 24em;
+            }
+        }
+
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: rgba(255, 255, 255, 0.75);
+            }
+
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        /* ----------------------------------FORM------------------------------------------------------- */
+
+
+        h1,
+        h2 {
+            margin: 0;
+        }
+
+        ::-webkit-input-placeholder {
+            text-align: right;
+            font-style: italic;
+            color: #12d32c;
+            font-size: 13px;
+        }
+
+        ::-moz-placeholder {
+            text-align: right;
+            font-style: italic;
+            color: #12d32c;
+            font-size: 13px;
+        }
+
+        svg {
+            width: 110px;
+            height: 120px;
+            float: right;
+            margin-top: -55px;
+        }
+
+        .button {
+            border: none;
+            border-radius: 2px;
+            color: #fff;
+            height: 36px;
+            padding: 0px 15px;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 36px;
+            vertical-align: middle;
+            font-family: "Roboto", sans-serif;
+        }
+
+        i.material-icons {
+            font-size: 18px;
+        }
+
+        .input:focus {
+            outline-width: 0px;
+        }
+
+        .input:invalid {
+            box-shadow: none;
+        }
+
+
+
+        .card.end {
+            padding-bottom: 0;
+        }
+
+        .card.end form {
+            display: none;
+        }
+
+        .header {
+            height: 150px;
+            background-image: linear-gradient(180deg, #424242, #212121);
+            background-size: 100% 100%;
+            color: #fff;
+            padding: 10px 15px;
+            overflow: hidden;
+        }
+
+        .header h2 {
+            font-size: 28px;
+            font-weight: 300;
+        }
+
+        .header p {
+            padding-right: 80px;
+            color: #bdbdbd;
+        }
+
+        /* Form styling */
+
+        form {
+            padding: 0 15px;
+        }
+
+        .input {
+            border-width: 0 0 1px 0;
+            border-color: #ccc;
+            border-style: solid;
+            width: 100%;
+            padding: 10px 5px 10px 0;
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+        }
+
+        .input-wrap {
+            position: relative;
+            margin: 20px auto 0;
+        }
+
+        .input-wrap:first-child {
+            margin-top: 0;
+        }
+
+        /* label {
+        top: 25px;
+        position: absolute;
+        left: 35px;
+        transition: all 0.8s ease-in-out;
+        color: #ccc;
+      } */
+
+        i {
+            position: relative;
+            left: 0px;
+            top: 25px;
+            transition: all 0.8s ease-in-out;
+            color: #757575;
+        }
+
+        /* .button i {
+            top: 0;
+            margin-right: 15px;
+        } */
+
+        i.active {
+            top: 10px;
+            width: 100%;
+            height: 100%;
+            color: #673ab7;
+            transition: all 0.8s;
+        }
+
+        label.active {
+            top: 10px;
+            transition: all 0.8s;
+            color: #ff4081;
+        }
+
+        i.invalid,
+        label.active.invalid {
+            color: #f44336;
+        }
+
+        .active textarea,
+        .not textarea {
+            border-bottom: none;
+        }
+
+        .input-wrap:before {
+            content: " ";
+            position: absolute;
+            font-size: 16px;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            -webkit-padding-before: 4px;
+            -webkit-padding-end: 3px;
+            -webkit-padding-after: 2px;
+            -webkit-padding-start: 4px;
+            text-align: center;
+            top: 20px;
+            background-color: transparent;
+            border-radius: 50%;
+            color: #fff;
+            font-family: "Material Icons";
+            transform: scale(0) rotate(90deg);
+            transform-origin: center;
+            transition: all 0.4s;
+        }
+
+        .input-wrap.valid:before {
+            content: "\e5ca";
+            background-color: #4caf50;
+            transform: scale(1) rotate(0deg);
+            transition: all 0.8s;
+        }
+
+        .input-wrap.invalid:before {
+            content: "\e14c";
+            background-color: #f44336;
+            transform: scale(1) rotate(0deg);
+            transition: all 0.8s;
+        }
+
+        .input-wrap.active:after,
+        .input-wrap.not.active:after {
+            border-bottom: 2px solid #ff4081;
+            bottom: 0;
+            left: 0;
+            content: "";
+            height: 0;
+            position: absolute;
+            width: 101%;
+            animation-name: bord;
+            animation-fill-mode: forwards;
+            animation-duration: 0.8s;
+            animation-timing-function: ease;
+        }
+
+        .input-wrap.not:after {
+            border-bottom: 2px solid #ff4081;
+            bottom: 0;
+            left: 0;
+            content: "";
+            height: 0;
+            position: absolute;
+            width: 100%;
+            animation-name: bords;
+            animation-fill-mode: forwards;
+            animation-duration: 0.8s;
+            animation-timing-function: ease;
+        }
+
+        .input-wrap.active.invalid:after {
+            border-bottom: 2px solid #f44336;
+            bottom: 0;
+            left: 0;
+            content: "";
+            height: 0;
+            position: absolute;
+            width: 100%;
+            animation-name: bord;
+            animation-fill-mode: forwards;
+            animation-duration: 0.8s;
+            animation-timing-function: ease;
+        }
+
+        /*
+      input[type="checkbox"] {
+        text-indent: -9999px;
+        vertical-align: text-top;
+      }
+
+      [type="checkbox"] + label:before,
+      [type="checkbox"] + label:after {
+        content: '';
+        left: 0;
+        position: absolute;
+        z-index: 1;
+      }
+
+      [type="checkbox"]:not(:checked) + label:before {
+        width: 0;
+        height: 0;
+        border: 3px solid transparent;
+        left: 3px;
+        top: 0px;
+        transform: scale(0);
+        transform-origin: 100% 100%;
+        transition: all 0.8s;
+      }
+
+      [type="checkbox"]:not(:checked) + label:after {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 1px solid #aaa;
+        top: 3px;
+        left: 4px;
+        transition: all 0.8s;
+        z-index: 0;
+      }
+
+      [type="checkbox"]:checked + label:before {
+        content: '\e876';
+        top: 0px;
+        left: 3px;
+        font-size: 16px;
+        color: #fff;
+        font-family: "Material Icons";
+        transform: scale(1);
+        transition: all 0.8s;
+      }
+
+      [type="checkbox"]:checked + label:after {
+        top: 3px;
+        left: 4px;
+        width: 12px;
+        height: 12px;
+        border: 1px solid #ff4081;
+        background-color: #ff4081;
+        transition: all 0.8s;
+        z-index: 0;
+      }
+
+      input[type="checkbox"] + label {
+        position: static;
+        font-size: 12px;
+        color: #757575;
+        font-weight: 500;
+      } */
+        /* End styles */
+
+        .card .ending {
+            visibility: hidden;
+            display: flex;
+            height: 0;
+            transition: visibility 0.8s linear;
+        }
+
+        .card.end .ending {
+            height: 100%;
+            min-height: 64px;
+            visibility: visible;
+            transition: visibility 0.8s linear;
+        }
+
+        .ending div:first-child {
+            width: 0;
+        }
+
+        .end .ending div:first-child {
+            background: #673ab7;
+            width: 85px;
+            transition: all 0.8s linear;
+        }
+
+        .ending h2 {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 300;
+            padding-top: 10px;
+        }
+
+        .ending i {
+            transform: scale(0) rotate(360deg);
+            left: 5px;
+            transition: all 0.8s ease;
+        }
+
+        .ending.showed i {
+            color: #fff;
+            font-size: 60px;
+            top: 0;
+            transform: scale(1) rotate(0deg);
+            transition: all 0.8s ease;
+        }
+
+        @keyframes bord {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 101%;
+            }
+        }
+
+        @keyframes bords {
+            0% {
+                width: 100%;
+            }
+
+            100% {
+                width: 0%;
+            }
+        }
+
+        @keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .button {
+            background: #388e3c;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+            transition: all 0.4s ease 0s;
+        }
+
+        /* --------------------------ＷＨＡＴ ＷＥ ＤＯ ＆ ＷＥ ＤＯ ＩＴ ＷＥＬＬ------------------------------------------------------- */
+
+        .flexbox {
+            display: flex;
+            /* border:2px solid blue; */
+            margin-bottom: 150px;
+        }
+
+        .leftbox {
+            height: 250px;
+            /* border: 2px solid red; */
+            flex: 60%;
+            align-self: center;
+        }
+
+        .rightbox {
+            /* border: 2px solid red; */
+            flex: 40%;
+        }
+
+        .leftbox h4 {
+            text-align: center;
+            font-family: monospace;
+            opacity: .8
+        }
+
+        .leftbox p {
+            text-align: center;
+            /* font-size:18px;   */
+        }
+
+        .rightbox img {
+            float: right;
+        }
+
+        /* ---------------------------------FEATURES------------------------------------ */
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            /* border:2px solid red */
+        }
+
+        .features img {
+            height: 180px;
+            width: 180px;
+        }
+
+        .features div {
+            /* border:2px solid blue; */
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* -----------------------------WHY CHOOSE US--------------------------------------------- */
+
+        .whychooseus {
+            display: flex;
+            justify-content: space-around;
+            /* border:2px solid red */
+        }
+
+        .whychooseus div {
+            /* border:2px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .whychooseus img {
+            height: 180px;
+            width: 180px;
+        }
+
+        /* ------------------------------TECHNOLOGY------------------------------------------ */
+
+        .technology {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .technology img {
+            height: 25%;
+            width: 20%;
+        }
+
+        /* -------------------------------CLIENT -------------------------------------------------------- */
+        .clients {
+            border: 2px solid black;
+            width: 100%;
+            height: 500px;
+            background-image: url("pictures/d8t3tu-efade148-3fde-403f-afb6-498053a7a100.jpg");
+            overflow: hidden;
+            display: flex;
+            justify-content: center
+        }
+
+        .clients>div {
+            /* border: 2px solid blue; */
+            height: 100%;
+            width: 500px;
+            border-radius: 50%;
+            /* margin: auto; */
+            background-color: white;
+            /* overflow: hidden; */
+        }
+
+        .clients>div>div {
+            /* border: 2px solid red; */
+            height: 353.5534px;
+            width: 353.5534px;
+            margin: auto;
+            margin-top: 73.2233px;
+            overflow: hidden;
+        }
+
+        .clients>div>div img {
+            width: 13%;
+            height: 10%;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .clients>div>div p {
+            font-size: 20px;
+            line-height: 34px;
+            color: #9e9e9e;
+            text-align: center;
+            font-family: cursive;
+            margin-top: 20px;
+
+        }
+
+        .clients ul li {
+            display: none
+        }
+
+        .clients .clientactive {
+            display: block
+        }
+
+
+        /* .clients>div>div p:last-child{
+        color: green;
+
+    } */
+        /* --------------------------------PORTFOLIO------------------------------------------------------------ */
+
+        .portfolio {
+            /* border:2px solid red; */
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .portfolio img {
+            height: 200px;
+            width: 150px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .portfolio img:hover {
+            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 1);
+            transition: box-shadow .3s;
+        }
+
+        /* -----------------------------FOOTER---------------------------------------------- */
+
+        footer {
+            background-color: black;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .foot {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: wheat;
+        }
+
+        .fa {
+            padding: 14px;
+            font-size: 26px;
+            width: 52px;
+            text-align: center;
+            text-decoration: none;
+            margin: 25px 2px;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: black;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: black;
+            color: white;
+        }
+
+        .fa-google {
+            background: black;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: black;
+            color: white;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+    </style>
+    <!-----------Desktop header------------------ -->
+    <style>
+        .desktopheader {
+            /* border: 2px solid red; */
+            display: flex;
+            height: 100px;
+            width: 90%;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            margin-top: 7px;
+
+        }
+
+        .desktopheader h3 {
+            margin: 0%;
+        }
+
+        .desktopheader a {
+            color: white;
+            font-size: 22px;
+        }
+
+        .desktopheader>div:first-child {
+            /* border: 2px solid red; */
+            height: 100%;
+            width: 140px;
+            /* position: relative; */
+            /* bottom: 20px; */
+        }
+
+        .desktopheader img {
+            height: 40px;
+            width: 40px;
+        }
+
+        .desktopheader>div:first-child img {
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <!-- --------Mobile header--------------------- -->
+    <style>
+        body {
+            margin: 0%;
+        }
+
+        .mobileheader {
+            /* border: 2px solid red; */
+            height: 60px;
+            width: 100%;
+            z-index: 999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            position: fixed;
+
+
+        }
+
+        .headericon {
+            /* border: 2px solid red; */
+            height: 100%;
+            width: 100px;
+        }
+
+        .mobileheader img {
+            /* border: 2px solid red; */
+            /* height: 100%; */
+            width: 100px;
+        }
+
+        /* ------------------------------------------------------ */
+
+        .burger {
+            /* border: 1px solid black; */
+            height: 35px;
+            margin: 20px;
+            display: block;
+            width: 30px;
+            float: right;
+            z-index: 999;
+        }
+
+        .burger span {
+            width: 25px;
+            margin-top: 5px;
+            border: 2px solid white;
+            display: block;
+        }
+
+        .burgernew span:first-child {
+            margin-top: 15px;
+            width: 30px;
+            transform: scale(0.9) rotate(45deg);
+            transition: transform 0.5s;
+        }
+
+        .burgernew span:last-child {
+            margin-top: -4px;
+            width: 30px;
+            transform: scale(0.9) rotate(-45deg);
+            transition: transform 0.5s;
+        }
+
+        .burgernew span:nth-child(2) {
+            display: none;
+        }
+
+        /* ------------------------------------------------------- */
+
+        .mydropdown {
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0%;
+            margin: 0%;
+            position: absolute;
+            top: 1px;
+            width: 100%;
+            line-height: 45px;
+            display: none;
+            z-index: 200;
+            background-image: url("pictures/pexels_photo_924825.jpg");
+            background-size: cover;
+        }
+
+        .mydropdown>li {
+            width: 100%;
+            border-bottom: 1px solid #616161;
+            /* box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, 0.25); */
+        }
+
+        .mydropdown>li a {
+            display: block;
+            /* border: 2px solid red; */
+            width: 100%;
+            height: 45px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #fafafa;
+            /* margin-left: 20px; */
+            padding-left: 20px;
+            font-family: monospace;
+        }
+
+        .mydropdown>li a:active {
+            /* background-color: black; */
+        }
+
+        /* ----------------------------------- */
+    </style>
+    <!-- ---------Image Zoom----------------------- -->
+    <style>
+        .myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+
+        .scrollmodal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 75%;
+            max-width: 75%;
+        }
+
+        /* Caption of Modal Image */
+
+        .caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+
+        .modal-content,
+        .caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        .out {
+            animation-name: zoom-out;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(1);
+            }
+
+            to {
+                -webkit-transform: scale(2);
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0.4);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes zoom-out {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(0);
+            }
+        }
+
+        /* The Close Button */
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
+    <!-- ------Desktop Tablet Mobile------------- -->
+    <style>
+        @media only screen and (min-width: 850px) {
+            .mobileheader {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 1300px) {
+
+
+            .desktopheader>img {
+                display: none;
+            }
+
+            .partner {
+                display: none
+            }
+
+            .mobile-partner {
+                display: block
+            }
+        }
+
+
+        @media only screen and (max-width: 850px) {
+            .desktopheader {
+                display: none;
+            }
+
+            .particle-canvas {
+                height: 500px
+            }
+
+            .features,
+            .whychooseus {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features div,
+            .whychooseus div {
+                width: 60%;
+                margin-top: 50px;
+            }
+
+            /* --------------Font size-------------------------------------------- */
+            h3 {
+                font-size: 36px;
+                font-family: anton;
+            }
+
+            .leftbox h4 {
+                font-size: 25px;
+            }
+
+            /* ----------------HIDDING---------------------------------------- */
+
+            .template>div {
+                width: 90%;
+                flex-direction: column;
+            }
+
+            .template>div p {
+                width: 100%
+            }
+
+            .card {
+                margin-top: 120px;
+                width: 100%
+            }
+
+            .heading {
+                height: 20px;
+
+            }
+
+
+
+
+
+
+
+
+
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .mobileheader img {
+                width: 80px;
+            }
+            .flexbox {
+                flex-direction: column;
+            }
+
+            .features div,
+            .whychooseus div {
+                width: 80%;
+            }
+
+            .pricing_table {
+                /* display: none; */
+                display: flex;
+                flex-direction: column;
+                margin: 0%;
+                align-items: flex-end;
+            }
+
+            .pricing_table>li {
+                width: 80%;
+            }
+
+            .pricing_table>li.active {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                box-shadow: none;
+            }
+
+            /* ---------Font size------------------------------- */
+            h3 {
+                font-size: 30px;
+                /* font-family: fantasy; */
+            }
+
+            .leftbox h4 {
+                font-size: 26px;
+            }
+
+            .clients {}
+
+            .clients>div {
+                width: 350px;
+                height: 350px;
+                margin-top: 75px
+            }
+
+            .clients>div>div {
+                height: 250px;
+                width: 250px;
+                margin-top: 50px;
+            }
+
+            .clients>div>div p {
+                font-size: 15px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- ------------MOBILE HEADER---------------------------- -->
+    <header class="mobileheader">
+        <!-- <div class="headericon"> -->
+        <img src="2dbd7850-6a1c-4b7d-be69-8d2dc8c4a7ca_200x200.png" alt="" />
+        <!-- </div> -->
+        <div class="burger" onclick="toggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="mydropdown">
+            <li>
+                <a href="" onclick="return false"></a>
+            </li>
+            <li><a href="" onclick="return false">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#aboutus">About us</a></li>
+            <li><a href="#ourclients">Our Clients</a></li>
+        </ul>
+    </header>
+    <!-- ---------------HEADER---------------------------- -->
+
+    <div class="template">
+        <header class="desktopheader">
+            <!-- <a href="">Home</a> -->
+            <div>
+                <img src="2dbd7850-6a1c-4b7d-be69-8d2dc8c4a7ca_200x200.png" alt="" />
+                <!-- <img src="5a29cb2407ece2.7312351915126884200325.png" alt="" /> -->
+                <!-- <img src="5a2a6c90122a70.2693825115127297440744.png" alt="" /> -->
+            </div>
+            <a href="#" style="color:#f06292">Home</a>
+            <a href="#services">Services</a>
+            <a href="#features">Features</a>
+            <a href="#aboutus">About us</a>
+            <a href="#ourclients">Our Clients</a>
+            <img src="PICTURES/5a355f1aa72482.6634998715134471946846.png" height="50px" width="50px" alt="" />
+            <h4 style="color:rgb(212, 185, 32);margin:0%">9971441252</h4>
+        </header>
+        <div>
+            <div>
+                <h1>We Are Your <span style="color:orange">Digital Partner</span> </h1>
+                <h5>we offer <span style="color:#80cbc4">Web Design, Mobile Development, eCommerce </span> Solutions &
+                    Digital Marketing services for Startups to big brands.</h5>
+                <a class="myButton" href="#services">More Details</a>
+            </div>
+
+            <div class="card">
+                <div class="header">
+                    <h2>Drop us a line...</h2>
+                    <p>Drop us a message and we will contact you back shortly</p>
+                    <svg version="1.1" class="Layer" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 113 120"
+                        xml:space="preserve" preserveAspectRatio="none">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #fff;
+                                stroke: rgba(0, 0, 0, 0.2);
+                                stroke-width: 2px;
+                            }
+                        </style>
+                        <g>
+                            <path class="st0" d="M93.8,87.4c16.7-28.2,23.9-51,11.5-70.9C100.1,8.2,92.4,4.3,84,2.7c6.1,12.9,6.3,28.3-0.4,41.7
+                              c5,2.6,8.3,7.9,8.3,13.9c0,8.7-7,15.7-15.7,15.7c-4.3,0-8.2-1.7-11.1-4.6l-19,14.8c0.7,1.4,0.4,3.1-0.9,4.1l-4,3.1
+                              c-1.4,1.1-3.5,0.8-4.5-0.6l-0.1-0.1c-1.1-1.4-0.8-3.5,0.6-4.5l4-3.1c1.3-1,3-0.9,4.2,0.2l18.9-14.8c-2.4-2.8-3.8-6.4-3.8-10.3
+                              c0-8.7,7-15.7,15.7-15.7c0.5,0,1,0,1.5,0.1c6.9-13.1,6.2-28.5-1-40.7c-10-0.5-20.3,1.2-28.4,2.2C31,6.2,26.8,1,26.8,1
+                              c-3.8,11.5,5.9,17,5.9,17s1.7-0.8-2.4,4.2c-4.1,5.1-5.2,15.6-5.8,18.4c-0.6,2.8,1.6,2.7,2.3,5.8c0.7,3.1-9.2,16.4-10.2,19.7
+                              c-1,3.3,8.1,6.9,8.1,6.9l-1.4,4.5c0.7,2.5,13.9,2,13.9,2c-2.8,4.2-10.5,3.7-10.5,3.7l-2.3,1.6c0,0,1.3,1.7,2.4,2.7
+                              c1.1,1,1.1,6.2,1.1,6.2c-1.3,8.6,1,10.3,5.9,12.5s12.6-3.1,12.6-2.1c0,1-0.1,19.8-0.1,19.8c29.7,14.6,51.4-6.4,51.4-6.4
+                              C95,109.8,93.8,87.4,93.8,87.4z" />
+                        </g>
+                    </svg>
+                </div>
+                <!-- <form class="form-wrap" class="md-form" autocomplete="off" method="post"> -->
+                <form action="https://formspree.io/shashanksingh1044@gmail.com" method="POST">
+                    <div class="input-wrap">
+                        <i class="material-icons">person</i>
+                        <label for="a">Name</label>
+                        <input class="input" type="text" class="a" value="" name="name" />
+                    </div>
+
+                    <div class="input-wrap">
+                        <i class="material-icons">email</i>
+                        <label for="b">E-mail</label>
+                        <input class="input" type="email" class="b" value="" name="email" />
+                    </div>
+
+                    <div class="input-wrap">
+                        <i class="material-icons">mic</i>
+                        <label for="c">Message</label>
+                        <textarea class="input" class="c" name="message"></textarea>
+                    </div>
+
+                    <div class="input-wrap">
+                        <!-- <button class="confirm" type="submit">Submit</button> -->
+                        <input class="button" type="submit">
+                    </div>
+                </form>
+
+                <div class="ending">
+                    <div>
+                        <i class="material-icons">check</i>
+                    </div>
+
+                    <div>
+                        <h2>Your Message has been sent successfuly</h2>
+                    </div>
+                </div>
+                <!-- end of ending -->
+            </div>
+        </div>
+    </div>
+
+    <div class="partner">
+        <div>CERTIFIED PARTNERS</div>
+        <div><img
+                src="partners\kisspng-google-adwords-google-advertising-professional-pay-5af34a119da991.7223368415258936496458.png"
+                alt=""></div>
+        <div><img src="partners\1200px-DigitalOcean_logo.svg.png" alt=""></div>
+        <div><img
+                src="partners\kisspng-paytm-logo-brand-service-product-funding-archives-letusdiscuss-com-5b6d395a2f19a3.3321178815338847621929.png"
+                alt=""></div>
+        <div><img style="height:60%;margin-top:25px"
+                src="partners\kisspng-godaddy-shared-web-hosting-service-domain-name-30-off-5b4a62a2886990.5440903015316015705588.png"
+                alt=""></div>
+        <div><img style="height:30%;margin-top:50px"
+                src="partners\kisspng-logo-nuela-percetakan-digital-printing-twilio-ve-twilio-logo-svg-12-vector-logos-5b6ea7bde6c919.4332302715339785579453.png"
+                alt=""></div>
+    </div>
+
+    <marquee class="mobile-partner">
+        <div><img
+                src="partners\kisspng-google-adwords-google-advertising-professional-pay-5af34a119da991.7223368415258936496458.png"
+                alt=""></div>
+        <div><img src="partners\1200px-DigitalOcean_logo.svg.png" alt=""></div>
+        <div><img
+                src="partners\kisspng-paytm-logo-brand-service-product-funding-archives-letusdiscuss-com-5b6d395a2f19a3.3321178815338847621929.png"
+                alt=""></div>
+        <div><img
+                src="partners\kisspng-godaddy-shared-web-hosting-service-domain-name-30-off-5b4a62a2886990.5440903015316015705588.png"
+                alt=""></div>
+        <div><img style="height:50%;margin-top:50px"
+                src="partners\kisspng-logo-nuela-percetakan-digital-printing-twilio-ve-twilio-logo-svg-12-vector-logos-5b6ea7bde6c919.4332302715339785579453.png"
+                alt=""></div>
+    </marquee>
+
+    <h3 class="center-align heading" id="services">
+        WHAT WE DO WE DO IT WELL
+    </h3>
+
+    <div class="flexbox">
+        <div class="leftbox">
+            <h4>
+                CREATIVE DESIGN
+            </h4>
+            <p>
+                Our proven creative website design services speak of your brand, thus establishing an instant
+                connection with your customers.
+            </p>
+        </div>
+        <div class="rightbox">
+            <img height="100%" width="100%"
+                src="pictures\kisspng-web-development-responsive-web-design-mockup-desssweb-development-houston-5b1cf40742b212.4866707015286241352732.png"
+                alt="" />
+        </div>
+    </div>
+
+    <div class="flexbox">
+        <div class="leftbox">
+            <h4>WEB DEVLOPMENT</h4>
+            <p>
+                We help you craft a functional and high-performing apps and websites through our effective mobile
+                and web developmen services.
+            </p>
+        </div>
+
+        <div class="rightbox">
+            <img height="100%" width="120%"
+                src="pictures\kisspng-responsive-web-design-web-development-website-wire-mock-up-5ac3b2651bb2e9.5018364815227746291135.png"
+                alt="" />
+        </div>
+    </div>
+
+    <div class="flexbox">
+        <div class="leftbox">
+            <h4>E-COMMERCE SOLUTION</h4>
+            <p>
+                Deliver a flawless shopping experience to your customers with our customized e-commerce solutions
+                tailored to your needs.
+            </p>
+        </div>
+        <div class="rightbox">
+            <img height="90%" width="100%"
+                src="pictures\kisspng-website-e-commerce-world-wide-web-digital-marketin-mobile-online-shopping-5aa34511625da9.4854262815206494894029.png"
+                alt="" />
+        </div>
+    </div>
+
+    <h3 class="center-align heading" id="features">FEATURES</h3>
+    <div class="features">
+        <div>
+            <img src="pictures\kisspng-responsive-web-design-html-5b0741500d5a58.3551641115272021280547.png" alt="" />
+            <h5 class="center-align">Responsive Design</h5>
+            <p class="center-align">
+                We offer multidevice compatible store, which will fully functional on any device such as mobiles,
+                tablets, desktops and laptops. You as a admin owner you always can manage option from admin panel.
+            </p>
+        </div>
+        <div>
+            <img src="pictures\kisspng-web-design-internet-business-website-search-engine-png-download-performance-free-5ab0ad03c07a66.0615257015215280677884.png"
+                alt="" />
+            <h5 class="center-align">Speed & Performance</h5>
+            <p class="center-align">
+                While we develop your store we keep in mind of speed & performance so you & your customer get hassel
+                free brwosing to the store, we use latest technology like compressor and Rocket-Loader.
+            </p>
+        </div>
+        <div>
+            <img src="pictures\kisspng-digital-marketing-search-engine-optimization-googl-seo-5ac2e58ddd0095.9167031915227221899052.png"
+                alt="" />
+            <h5 class="center-align">SEO Ready</h5>
+            <p class="center-align">
+                We provide all-rounder SEO tools that improves page's ranking on various search engines; including
+                Google, Bing, Yahoo & more. So your customer can easily find your website on search engines.
+            </p>
+        </div>
+    </div>
+
+    <h3 class="center-align heading" id="aboutus">WHY CHOOSE US</h3>
+    <div class="whychooseus">
+        <div>
+            <img src="pictures\kisspng-portable-network-graphics-construction-image-websi-download-24x7-help-machinespotlight-gq-5b817a67674813.8984174915352121354231.png"
+                alt="" />
+            <h5 class="center-align">24x7 Support</h5>
+            <p class="center-align">
+                Our hosting experts are available round-the-clock to help you via phone, chat or email with any web
+                hosting queries.
+            </p>
+        </div>
+        <div>
+            <img src="pictures\kisspng-money-back-guarantee-stock-photography-royalty-fre-money-back-guarantee-5ae21aee075940.9160485515247674700301.png"
+                alt="" />
+            <h5 class="center-align">30-day Guarantee</h5>
+            <p class="center-align">
+                Try our best web website plans risk-free! If you are not satisfied, you can request a complete
+                refund within 45 days of your purchase.
+            </p>
+        </div>
+        <div>
+            <img src="pictures\kisspng-cloud-computing-computer-servers-dedicated-hosting-server-5ac69964bb20c7.9671806815229648367665.png"
+                alt="" />
+            <h5 class="center-align">99.9% Uptime</h5>
+            <p class="center-align">
+                We understand your website is vital for your business. All our hosting plans come with a promise of
+                99.9% uptime.
+            </p>
+        </div>
+    </div>
+
+    <h3 class="center-align heading" id="ourclients">OUR CLIENTS WE WORK FOR</h3>
+    <div class="clients">
+        <div>
+            <div>
+                <ul>
+                    <li>
+                        <img src="pictures/kisspng-quotation-mark-guillem.png" alt="">
+                        <p>I was a bit hesitant at first because I am in Canada and EazyTrek was in India but they
+                            quickly dispersed any doubt I had.and team were quick, courteous and very efficient.</p>
+                        <p style="color:green">Delphine</p>
+                    </li>
+
+                    <li>
+                        <img src="pictures/kisspng-quotation-mark-guillem.png" alt="">
+                        <p>EazyTrek, I would say is a brilliant team of creative designers and quirky developers.I was
+                            amazed by the end product.I highly recommend EazyTrek</p>
+                        <p style="color:green">Jaden</p>
+                    </li>
+
+                    <li>
+                        <img src="pictures/kisspng-quotation-mark-guillem.png" alt="">
+                        <p>They did the work pretty well, quick turnaround, great communication and good skills! They
+                            also tries to find the best solution for your task and thinks about the requirements while
+                            working.</p>
+                        <p style="color:green">ALCHEMY</p>
+                    </li>
+                    <li>
+                        <img src="pictures/kisspng-quotation-mark-guillem.png" alt="">
+                        <p>They did a great job making some quick html updates for us. He was very responsive,
+                            communicated his progress, and was able to complete the job quickly within a tight schedule.
+                        </p>
+                        <p style="color:green">SCOUT</p>
+                    </li>
+                    <li>
+                        <img src="pictures/kisspng-quotation-mark-guillem.png" alt="">
+                        <p>After working with him on one project, I became his long-term client. I would hire them again
+                            if I have other projects. they are very fast, responsible and skilled.
+                        </p>
+                        <p style="color:green">RENE</p>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="center-align heading">ALREADY DEVLOPED STORES
+    </h3>
+    <div class="portfolio">
+        <img class="myImg1" src="portfolio\screencapture-freelancer-in-u-chrisjackson3-2018-12-16-17.png" alt="" />
+        <img class="myImg2" src="portfolio\screencapture-freelancer-in-u-leopedia-2018-12-17-18_02_24.png" alt="" />
+        <img class="myImg3" src="portfolio\screencapture-freelancer-in-u-leopedia-2018-12-17-18_02_50.png" alt="" />
+        <img class="myImg4" src="portfolio\screencapture-freelancer-in-u-leopedia-2018-12-17-18_09_43.png" alt="" />
+        <img class="myImg5" src="portfolio\screencapture-freelancer-in-u-leopedia-2018-12-17-18_03_26 (1).png" alt="" />
+        <img class="myImg6" src="portfolio\screencapture-freelancer-in-u-leopedia-2018-12-17-18_03_57.png" alt="" />
+        <img class="myImg7" src="portfolio\screencapture-freelancer-in-u-leopedia-2018-12-17-18_04_30.png" alt="" />
+        <img class="myImg8" src="portfolio\screencapture-freelancer-in-u-leopedia-2018-12-17-18_10_47.png" alt="" />
+    </div>
+
+    <div class="myModal scrollmodal">
+        <img class="modal-content img01" id="img01" />
+    </div>
+
+    <footer>
+        <div class="foot">
+            <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+            <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+            <a href="https://www.google.com" class="fa fa-google"></a>
+        </div>
+        <div class="foot">© 2018 All Rights Reserved.</div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var elems = document.querySelectorAll(".materialboxed");
+            var instances = M.Materialbox.init(elems, options);
+        });
+    </script>
+    <!-- FORM-->
+    <script>
+        $(".input").on("focus blur", function () {
+            if ($(this).val().length > 0 || $(".input").is(":focus")) {
+                $(this)
+                    .siblings()
+                    .addClass("active");
+                $(this)
+                    .parent()
+                    .addClass("active");
+            } else {
+                $(this)
+                    .siblings()
+                    .removeClass("active")
+                    .addClass("not");
+                $(this)
+                    .parent()
+                    .removeClass("active")
+                    .addClass("not");
+            }
+
+            if (
+                ($(this).val().length < 2 &&
+                    $(".input").is(":focus") != true &&
+                    $(this).is(":invalid")) ||
+                ($(this).is(":invalid") && $(".input").is(":focus") != true)
+            ) {
+                $(this)
+                    .parent()
+                    .addClass("invalid");
+                $(this)
+                    .siblings()
+                    .addClass("invalid");
+            } else {
+                $(this)
+                    .parent()
+                    .removeClass("invalid");
+                $(this)
+                    .siblings()
+                    .removeClass("invalid");
+            }
+
+            if (
+                $(this).val().length > 0 &&
+                $(this).is(":valid") &&
+                $(".input").is(":focus") != true
+            ) {
+                $(this)
+                    .parent()
+                    .addClass("valid");
+                $(this)
+                    .siblings()
+                    .addClass("valid");
+            } else {
+                $(this)
+                    .parent()
+                    .removeClass("valid");
+                $(this)
+                    .siblings()
+                    .removeClass("valid");
+            }
+        });
+
+        $("#d").change(enableBtn);
+        $(".input").blur(enableBtn);
+
+        function enableBtn() {
+            if (
+                $("#d").is(":checked") == false ||
+                $(".input")
+                    .parent(".input-wrap")
+                    .hasClass("invalid") == true ||
+                $(".input").val().length < 2
+            ) {
+                $(".confirm").prop("disabled", true);
+            } else {
+                $(".confirm").prop("disabled", false);
+            }
+        }
+        enableBtn();
+
+        $(".confirm").click(function () {
+            $("form").submit(function (event) {
+                $(".card").addClass("end");
+                $(".ending").addClass("showed");
+                event.preventDefault();
+            });
+        });
+    </script>
+    <!-- FORM OPACITY LOGIC -->
+    <script>
+        document.getElementsByClassName("card")[0].style.opacity = 1;
+        document.getElementsByClassName("card")[0].style.transition = "opacity 2s";
+    </script>
+    <!-- smooth scroll--->
+    <script>
+        $(
+            'a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])'
+        ).click(function () {
+            if (
+                location.pathname.replace(/^\//, "") ==
+                this.pathname.replace(/^\//, "") &&
+                location.hostname == this.hostname
+            ) {
+                var target = $(this.hash);
+                target = target.length ?
+                    target :
+                    $("[name=" + this.hash.slice(1) + "]");
+                if (target.length) {
+                    $("html,body").animate({
+                        scrollTop: target.offset().top
+                    },
+                        1000
+                    );
+                    return false;
+                }
+            }
+        });
+
+
+    </script>
+    <!--mobile header -->
+    <!-- <script>
+    function toggle() {
+      if (document.getElementsByClassName("burger")[0].className == "burger") {
+        document.getElementsByClassName("burger")[0].className += " burgernew";
+        // document.querySelector("header ul").style.display = "block";
+        $("header ul").slideDown("slow");
+      } else {
+        document.getElementsByClassName("burger")[0].className = "burger";
+        // document.querySelector("header ul").style.display = "none";
+        $("header ul").slideUp("slow");
+      }
+    }
+  </script> -->
+    <script>
+        function toggle() {
+            if (document.getElementsByClassName("burger")[0].className == "burger") {
+                document.getElementsByClassName("burger")[0].className += " burgernew";
+            } else {
+                document.getElementsByClassName("burger")[0].className = "burger";
+            }
+        }
+        $(".burger").click(function () {
+            $(".mydropdown").slideToggle(500);
+        });
+        $(".programes").click(function () {
+            $(".mysubdropdownone").toggle(500);
+        });
+        $(".partner").click(function () {
+            $(".mysubdropdowntwo").toggle(500);
+        });
+    </script>
+    <script>
+        $(".mydropdown > li a ").click(function () {
+            $(".mydropdown").slideToggle(500);
+            if (document.getElementsByClassName("burger")[0].className == "burger") {
+                document.getElementsByClassName("burger")[0].className += " burgernew";
+            } else {
+                document.getElementsByClassName("burger")[0].className = "burger";
+            }
+        });
+    </script>
+    <!-- Image Zoom--- -->
+    <script>
+        var modal = document.getElementsByClassName("myModal")[0];
+        var modalImg = document.getElementsByClassName("img01")[0];
+        var captionText = document.getElementsByClassName("caption")[0];
+        var img;
+        for (var i = 1; i <= 8; i++) {
+            img = document.getElementsByClassName("myImg" + i)[0];
+            img.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
+                captionText.innerHTML = this.alt;
+            };
+        }
+        // When the user clicks on <span> (x), close the modal
+        modal.onclick = function () {
+            img01.className += " out";
+            setTimeout(function () {
+                modal.style.display = "none";
+                img01.className = "modal-content";
+            }, 400);
+        };
+    </script>
+    <!-- --client--- -->
+    <script>
+        var i = 0;
+        var lisize = document.querySelectorAll(".clients ul li").length
+        function textchange() {
+            if (i == lisize) {
+                document.querySelectorAll(".clients ul li")[i - 1].className = ""
+                i = 0
+            }
+            if (i > 0) {
+                document.querySelectorAll(".clients ul li")[i - 1].className = ""
+            }
+            document.querySelectorAll(".clients ul li")[i].className = "clientactive"
+            i++
+        }
+        setInterval(textchange, "3000")
+
+    </script>
+</body>
+
+</html>
